@@ -1,0 +1,19 @@
+<div class="card" *ngFor="let movie of list | paginate: { itemsPerPage: 10, currentPage: p }" style="display: inline-block">
+  <img
+    class="card-img-top"
+    src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{
+      movie.backdrop_path
+    }}"
+    alt=""
+  />
+  <div class="card-body">
+    <h5 class="card-title">
+      {{ movie.title }}
+    </h5>
+    <p class="card-text">
+      {{ movie.overview }}
+    </p>
+    <a routerLink="/" class="btn btn-primary"> Details </a>
+  </div>
+</div>
+<pagination-controls (pageChange)="p = $event" class="float-right"></pagination-controls>

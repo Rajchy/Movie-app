@@ -1,0 +1,18 @@
+<div class="card" *ngFor="let movie of list" style="display: inline-block">
+     <img  class="card-img-top" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{movie.poster_path}}" alt="">
+	<div class="card-body">
+		<h5 class="card-title">
+      {{ movie.title }}
+			<!-- <span class="badge badge-primary">{{ movie.type | uppercase }}</span> -->
+    </h5>
+		<p class="card-text">
+      {{ movie.overview }}
+    </p>
+		<!-- <a 
+      routerLink="/movie-detail" 
+      [queryParams]="{ movieId: movie.imdbID }" 
+      class="btn btn-primary">
+			Learn More
+		</a> -->
+	</div>
+</div>
